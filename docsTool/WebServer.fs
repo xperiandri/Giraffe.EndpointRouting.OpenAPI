@@ -9,6 +9,7 @@ module WebServer =
     open System.Net.WebSockets
     open System.Diagnostics
     open System.Runtime.InteropServices
+    open System.Threading.Tasks
 
     let hostname = "localhost"
     let port = 5000
@@ -28,7 +29,7 @@ module WebServer =
 
     /// Async version of IApplicationBuilder.Use
     let useAsync (middlware : HttpContext -> (unit -> Async<unit>) -> Async<unit>) (app:IApplicationBuilder) =
-        app.Use(fun env next ->
+        app.Use(fun env (next : Func<Task>) ->
             middlware env (next.Invoke >> Async.AwaitTask)
             |> Async.StartAsTask
             :> System.Threading.Tasks.Task
