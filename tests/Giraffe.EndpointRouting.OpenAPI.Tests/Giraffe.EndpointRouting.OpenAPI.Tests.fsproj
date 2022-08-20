@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
@@ -7,14 +7,19 @@
         <IsPackable>false</IsPackable>
         <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     </PropertyGroup>
+
     <ItemGroup>
-        <ProjectReference Include="../../src/Giraffe.EndpointRouting.OpenAPI/Giraffe.EndpointRouting.OpenAPI.fsproj" />
-    </ItemGroup>
-    <ItemGroup>
-        <None Include="paket.references" />
         <Compile Include="Tests.fs" />
         <Compile Include="Main.fs" />
     </ItemGroup>
-    <Import Project="..\..\.paket\Paket.Restore.targets" />
+
+    <ItemGroup>
+        <PackageReference Include="altcover" />
+        <PackageReference Include="Expecto" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../../src/Giraffe.EndpointRouting.OpenAPI/Giraffe.EndpointRouting.OpenAPI.fsproj" />
+    </ItemGroup>
 </Project>
 

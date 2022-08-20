@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!--<CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>-->
+        <LangVersion Condition="'$(DefaultLanguageSourceExtension)'=='.fs'">6.0</LangVersion>
+        <SystemVersion>6.0.*</SystemVersion>
+        <MicrosoftAspNetCoreVersion>6.0.*</MicrosoftAspNetCoreVersion>
+        <MicrosoftExtensionsVersion>6.0.*</MicrosoftExtensionsVersion>
+        <FakeVersion>5.23.*</FakeVersion>
+        <FsToolkitVersion>2.13.0</FsToolkitVersion>
+    </PropertyGroup>
+    <ItemGroup Label="General">
+        <PackageReference Update="altcover" Version="8.3.*" />
+        <PackageReference Update="Giraffe" Version="6.0.*" />
+        <PackageReference Update="Microsoft.OpenApi" Version="1.3.*" />
+        <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.*"/>
+        <PackageReference Update="Swashbuckle.AspNetCore.ReDoc" Version="6.4.0" />
+    </ItemGroup>
+    <!-- Here we add references to all common F# NuGet packages in-once -->
+    <ItemGroup Label="FSharp Common" Condition="'$(DefaultLanguageSourceExtension)'=='.fs'" >
+        <PackageReference Include="FSharp.Control.AsyncSeq" Version="3.*" />
+        <PackageReference Include="FSharp.Control.FusionTasks" Version="2.5.*" />
+        <PackageReference Include="FSharp.Control.Reactive" Version="5.0.5" />
+        <PackageReference Update="FSharp.Core" Version="6.0.*">
+            <ExcludeAssets>contentFiles</ExcludeAssets>
+        </PackageReference>
+        <PackageReference Include="FSharp.SystemTextJson" Version="0.19.*" />
+        <PackageReference Include="FSharpx.Extras" Version="3.*" />
+        <PackageReference Include="FsToolkit.ErrorHandling" Version="2.*" />
+        <PackageReference Include="FsToolkit.ErrorHandling.TaskResult" Version="2.*" />
+        <PackageReference Include="FsToolkit.ErrorHandling.AsyncSeq" Version="2.*" />
+        <PackageReference Include="IcedTasks" Version="0.2.0-*" />
+    </ItemGroup>
+    <ItemGroup Label="Building">
+        <PackageReference Update="Fake.Core.Environment" Version="$(FakeVersion)" />
+        <PackageReference Update="Fake.DotNet.Cli" Version="$(FakeVersion)" />
+        <PackageReference Update="Fake.IO.FileSystem" Version="$(FakeVersion)" />
+    </ItemGroup>
+    <ItemGroup Label="Testing">
+        <PackageReference Update="Expecto" Version="9.0.*" />
+        <PackageReference Update="Microsoft.AspNetCore.TestHost" Version="$(MicrosoftAspNetCoreVersion)" />
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.*" />
+        <PackageReference Update="YoloDev.Expecto.TestSdk" Version="0.*" />
+    </ItemGroup>
+    <ItemGroup Label="Docs">
+        <PackageReference Update="Argu" Version="6.1.*" />
+        <PackageReference Update="Fable.React" Version="8.0.1" />
+        <PackageReference Update="FSharp.Formatting" Version="4.0.0" />
+        <PackageReference Update="FSharp.Literate" Version="4.0.0" />
+        <PackageReference Update="FSharp.Compiler.Service" Version="35.0.0" />
+    </ItemGroup>
+</Project>

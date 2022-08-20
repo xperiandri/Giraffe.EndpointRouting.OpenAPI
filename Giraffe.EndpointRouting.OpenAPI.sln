@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.3.32811.315
+VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C397A34C-84F1-49E7-AEBC-2F9F2B196216}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Giraffe.EndpointRouting.OpenAPI", "src\Giraffe.EndpointRouting.OpenAPI\Giraffe.EndpointRouting.OpenAPI.fsproj", "{5D30E174-2538-47AC-8443-318C8C5DC2C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ACBEE43C-7A88-4FB1-9B06-DB064D22B29F}"
+	ProjectSection(SolutionItems) = preProject
+		tests\Directory.Build.props = tests\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Giraffe.EndpointRouting.OpenAPI.Tests", "tests\Giraffe.EndpointRouting.OpenAPI.Tests\Giraffe.EndpointRouting.OpenAPI.Tests.fsproj", "{1CA2E092-2320-451D-A4F0-9ED7C7C528CA}"
 EndProject
@@ -17,9 +23,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{A52616
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "OpenAPI.Sample", "sample\OpenAPI.Sample\OpenAPI.Sample.fsproj", "{101F47BB-C767-48E8-9E70-6F15FCF7FDCD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Paket", "Paket", "{51B1CB4E-E5C5-4C8E-BE1C-E3E837CC3C38}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1ED4C7B2-9A95-4ABE-A86C-3721F76A33BD}"
 	ProjectSection(SolutionItems) = preProject
-		paket.dependencies = paket.dependencies
+		.editorconfig = .editorconfig
+		build.fsx = build.fsx
+		Directory.Build.targets = Directory.Build.targets
+		global.json = global.json
+		Packages.props = Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{40E995A5-9C3D-4BB5-9764-D27C0231CBA8}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{BC92F077-0EB3-4D43-92C1-8DBE05F64DCA}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build.yml = .github\workflows\build.yml
+		.github\ISSUE_TEMPLATE.md = .github\ISSUE_TEMPLATE.md
+		.github\PULL_REQUEST_TEMPLATE.md = .github\PULL_REQUEST_TEMPLATE.md
 	EndProjectSection
 EndProject
 Global
@@ -90,6 +114,6 @@ Global
 		{101F47BB-C767-48E8-9E70-6F15FCF7FDCD} = {A52616BF-41E2-4BE6-B4AE-861414EB63A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AE480C78-3AFB-49CF-AFA4-02374E9BC18B}
+		SolutionGuid = {A75990D5-F84E-4877-90E4-AC3FC3AB7C9F}
 	EndGlobalSection
 EndGlobal
