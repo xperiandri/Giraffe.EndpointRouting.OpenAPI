@@ -1,28 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <OutputType>Library</OutputType>
-        <IsPackable>true</IsPackable>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
 
-    <PropertyGroup>
-        <Title>Giraffe.EndpointRouting.OpenAPI</Title>
-        <Description>Giraffe.EndpointRouting.OpenAPI integrates OpenAPI schema definitions with Giraffe applications through shadowing existing Giraffe primitives</Description>
-    </PropertyGroup>
+  <PropertyGroup>
+    <Title>Giraffe.EndpointRouting.OpenAPI</Title>
+    <Description>Giraffe.EndpointRouting.OpenAPI integrates OpenAPI schema definitions with Giraffe applications through shadowing existing Giraffe primitives</Description>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <Compile Include="Composition.fs" />
-        <Compile Include="Metadata.fs" />
-        <Compile Include="Extensions.fs" />
-        <Compile Include="Combinators.fs" />
-        <Compile Include="Library.fs" />
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Composition.fs" />
+    <Compile Include="Metadata.fs" />
+    <Compile Include="Extensions.fs" />
+    <Compile Include="Combinators.fs" />
+    <Compile Include="Library.fs" />
+  </ItemGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Giraffe" />
-        <PackageReference Include="Microsoft.OpenApi" />
-        <PackageReference Include="Microsoft.SourceLink.GitHub" />
-    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Giraffe" />
+    <PackageReference Include="Microsoft.OpenApi" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" />
+  </ItemGroup>
 </Project>

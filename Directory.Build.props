@@ -1,12 +1,12 @@
 <Project>
-    <PropertyGroup>
-        <!-- summary is not migrated from project.json, but you can use the <Description> property for that if needed. -->
-        <PackageTags>f#, fsharp</PackageTags>
-        <PackageProjectUrl>https://github.com/baronfel/Giraffe.EndpointRouting.OpenAPI</PackageProjectUrl>
-        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <RepositoryType>git</RepositoryType>
-        <Authors>baronfel</Authors>
-        <RepositoryUrl>https://github.com/baronfel/Giraffe.EndpointRouting.OpenAPI</RepositoryUrl>
-        <!-- owners is not supported in MSBuild -->
-    </PropertyGroup>
+  <PropertyGroup>
+    <!-- summary is not migrated from project.json, but you can use the <Description> property for that if needed. -->
+    <PackageTags>f#, fsharp</PackageTags>
+    <PackageProjectUrl>https://github.com/baronfel/Giraffe.EndpointRouting.OpenAPI</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <Authors>baronfel</Authors>
+    <RepositoryUrl>https://github.com/baronfel/Giraffe.EndpointRouting.OpenAPI</RepositoryUrl>
+    <!-- owners is not supported in MSBuild -->
+  </PropertyGroup>
 </Project>
